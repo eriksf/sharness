@@ -22,7 +22,7 @@ SHARNESS_VERSION="1.0.0"
 export SHARNESS_VERSION
 
 # Public: The file extension for tests.  By default, it is set to "t".
-: ${SHARNESS_TEST_EXTENSION:=t}
+: ${SHARNESS_TEST_EXTENSION:=sh}
 export SHARNESS_TEST_EXTENSION
 
 #  Reset TERM to original terminal if found, otherwise save orignal TERM
