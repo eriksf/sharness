@@ -823,8 +823,9 @@ fi
 # variable is set to that directory too.
 export SHARNESS_TRASH_DIRECTORY
 
+USER_HOME="$HOME"
 HOME="$SHARNESS_TRASH_DIRECTORY"
-export HOME
+export HOME USER_HOME
 
 mkdir -p "$SHARNESS_TRASH_DIRECTORY" || exit 1
 # Use -P to resolve symlinks in our working directory so that the cwd
