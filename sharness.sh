@@ -636,6 +636,20 @@ test_must_be_empty() {
 	fi
 }
 
+# Public: Check if the file expected to exist and not be empty is actually there, and barfs
+# otherwise.
+#
+# $1 - File to check for existence/size.
+#
+# Returns 0 if file exists & has non-zero size, 1 otherwise.
+test_must_exist() {
+	if ! test -s "$1"
+	then
+		echo "'$1' doesn't exist or has zero-size."
+		return 1
+	fi
+}
+
 # Public: Schedule cleanup commands to be run unconditionally at the end of a
 # test.
 #
